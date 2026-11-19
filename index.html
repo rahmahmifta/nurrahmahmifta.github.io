@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nur Rahmah Miftakhul Jannah | Data Analyst</title>
+<meta name="description" content="Portofolio Data Analyst – Nur Rahmah Miftakhul Jannah, S1 Statistika Universitas Airlangga.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#14213D; --navy:#1F3864; --accent:#2F6FDE; --muted:#5B6475;
+    --bg:#F6F7FB; --card:#FFFFFF; --line:#E3E7EF; --chip:#EAF0FB;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Plus Jakarta Sans',system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
+  a{color:var(--accent);text-decoration:none}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+
+  /* NAV */
+  nav{position:sticky;top:0;z-index:10;background:rgba(246,247,251,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;justify-content:space-between;align-items:center;height:60px}
+  nav .logo{font-weight:800;color:var(--navy)}
+  nav ul{display:flex;gap:22px;list-style:none;font-size:14px;font-weight:600}
+  nav ul a{color:var(--muted)} nav ul a:hover{color:var(--navy)}
+
+  /* HERO */
+  .hero{padding:64px 0 48px}
+  .hero .top{display:grid;grid-template-columns:1fr 200px;gap:40px;align-items:center}
+  .tag{display:inline-block;background:var(--chip);color:var(--navy);font-weight:700;font-size:13px;padding:5px 12px;border-radius:99px;margin-bottom:14px}
+  h1{font-size:44px;line-height:1.15;font-weight:800;color:var(--navy);margin-bottom:14px}
+  .hero p{font-size:17px;color:var(--muted);max-width:620px;margin-bottom:24px}
+  .btns{display:flex;flex-wrap:wrap;gap:10px}
+  .btn{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:14px;padding:11px 18px;border-radius:10px;border:1.5px solid var(--navy);color:var(--navy);background:#fff}
+  .btn.primary{background:var(--navy);color:#fff}
+  .btn:hover{transform:translateY(-1px)}
+  .photo{width:200px;height:240px;border-radius:20px;object-fit:cover;box-shadow:0 18px 40px rgba(20,33,61,.18)}
+
+  /* STATS */
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:36px}
+  .stat{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px}
+  .stat b{display:block;font-size:26px;color:var(--navy);line-height:1.2}
+  .stat span{font-size:13px;color:var(--muted)}
+
+  section{padding:56px 0}
+  h2{font-size:28px;font-weight:800;color:var(--navy);margin-bottom:6px}
+  .sub{color:var(--muted);margin-bottom:28px}
+
+  /* PROJECTS */
+  .projects{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px}
+  .proj{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column}
+  .proj img{width:100%;height:190px;object-fit:cover;object-position:top;border-bottom:1px solid var(--line);cursor:zoom-in}
+  .proj .cover{height:190px;border-bottom:1px solid var(--line);background:linear-gradient(135deg,#1F3864 0%,#2F6FDE 100%);color:#fff;display:flex;flex-direction:column;justify-content:flex-end;padding:20px;gap:4px}
+  .proj .cover b{font-size:20px;line-height:1.25} .proj .cover span{font-size:13px;opacity:.85}
+  .proj .cover .ic{font-size:34px;margin-bottom:auto}
+  .proj .body{padding:18px;display:flex;flex-direction:column;gap:10px;flex:1}
+  .proj h3{font-size:17px;line-height:1.35}
+  .proj p{font-size:14px;color:var(--muted)}
+  .chips{display:flex;flex-wrap:wrap;gap:6px}
+  .chip{background:var(--chip);color:var(--navy);font-size:12px;font-weight:600;padding:3px 10px;border-radius:99px}
+  .proj .links{margin-top:auto;display:flex;gap:14px;font-size:14px;font-weight:700}
+
+  /* TIMELINE */
+  .tl{display:flex;flex-direction:column;gap:14px}
+  .job{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;display:grid;grid-template-columns:170px 1fr;gap:16px}
+  .job .when{font-size:13px;font-weight:700;color:var(--muted)}
+  .job h3{font-size:16px} .job h4{font-size:14px;color:var(--accent);font-weight:600;margin-bottom:6px}
+  .job ul{padding-left:18px;font-size:14px;color:var(--muted)}
+
+  /* SKILLS + CERTS */
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  .box{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px}
+  .box h3{font-size:16px;margin-bottom:12px}
+  .skillgroup{margin-bottom:12px} .skillgroup small{display:block;font-weight:700;color:var(--muted);font-size:12px;margin-bottom:6px;text-transform:uppercase;letter-spacing:.4px}
+  .cert{padding:10px 0;border-bottom:1px dashed var(--line);font-size:14px}
+  .cert:last-child{border-bottom:none}
+  .cert b{display:block} .cert span{color:var(--muted);font-size:13px}
+
+  /* CONTACT */
+  .contact{background:var(--navy);color:#fff;border-radius:20px;padding:36px;text-align:center}
+  .contact h2{color:#fff} .contact p{color:#C9D3EA;margin-bottom:20px}
+  .contact .btn{border-color:#fff}
+  footer{text-align:center;font-size:13px;color:var(--muted);padding:28px 0 40px}
+
+  /* LIGHTBOX */
+  .lb{position:fixed;inset:0;background:rgba(10,15,30,.88);display:none;align-items:center;justify-content:center;padding:20px;z-index:50;cursor:zoom-out}
+  .lb.open{display:flex} .lb img{max-width:100%;max-height:100%;border-radius:8px}
+
+  @media (max-width:760px){
+    nav ul{display:none}
+    .hero{padding:36px 0}
+    .hero .top{grid-template-columns:1fr;text-align:left}
+    .photo{width:120px;height:144px;order:-1}
+    h1{font-size:32px}
+    .stats{grid-template-columns:1fr 1fr}
+    .job{grid-template-columns:1fr;gap:4px}
+    .grid2{grid-template-columns:1fr}
+    .contact{padding:28px 18px}
+  }
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <span class="logo">Nur Rahmah M.J.</span>
+  <ul><li><a href="#proyek">Proyek</a></li><li><a href="#pengalaman">Pengalaman</a></li><li><a href="#keahlian">Keahlian</a></li><li><a href="#kontak">Kontak</a></li></ul>
+</div></nav>
+
+<!-- ================= PROFIL ================= -->
+<header class="hero"><div class="wrap top">
+  <div>
+    <span class="tag">Data Analyst • Business Analyst</span>
+    <h1>Nur Rahmah Miftakhul Jannah</h1>
+    <p>Lulusan S1 Statistika Universitas Airlangga dengan pengalaman ±1,5 tahun di bidang business analysis dan administrasi data di perusahaan distribusi dan FMCG. Terbiasa mengelola master data, memantau KPI, dan menyusun laporan serta dashboard performa.</p>
+    <div class="btns">
+      <a class="btn primary" href="#proyek">Lihat Proyek</a>
+      <a class="btn" href="assets/CV_Nur_Rahmah.pdf" target="_blank">Unduh CV</a>
+      <a class="btn" href="https://www.linkedin.com/in/nurrahmahmifta" target="_blank">LinkedIn</a>
+    </div>
+  </div>
+  <img class="photo" src="assets/foto.jpg" alt="Foto Nur Rahmah Miftakhul Jannah">
+</div>
+<div class="wrap">
+  <div class="stats">
+    <div class="stat"><b>±1,5 th</b><span>Pengalaman kerja</span></div>
+    <div class="stat"><b>6 region</b><span>Master data SFA dikelola</span></div>
+    <div class="stat"><b>3.000+</b><span>Purchase Order diproses</span></div>
+    <div class="stat"><b>3 tools BI</b><span>Power BI, Tableau, Looker</span></div>
+  </div>
+</div>
+</header>
+
+<!-- ================= PROYEK =================
+     Untuk menambah proyek: salin satu blok <article class="proj"> ... </article>,
+     tempel di bawah proyek terakhir, lalu ganti gambar, judul, deskripsi, dan link. -->
+<section id="proyek"><div class="wrap">
+  <h2>Proyek & Portofolio</h2>
+  <p class="sub">Klik gambar untuk memperbesar.</p>
+  <div class="projects">
+
+    <article class="proj">
+      <img src="assets/pbi.jpg" alt="Dashboard Power BI">
+      <div class="body">
+        <div class="chips"><span class="chip">Power BI</span><span class="chip">Data Cleaning</span><span class="chip">Data Modeling</span></div>
+        <h3>Executive Dashboard Penjualan FMCG 2025</h3>
+        <p>Membersihkan 20.162 baris data (150 order duplikat, 45 variasi nama kota, 12 variasi status), membangun star schema, dan memantau revenue vs target bulanan dengan pencapaian 99,9%.</p>
+        <div class="links"><a href="https://drive.google.com/file/d/1Y58nmYdaYwQ_9CBpxbH_JGU4lNBcvipH/view?usp=sharing" target="_blank">Lihat portofolio →</a></div>
+      </div>
+    </article>
+
+    <article class="proj">
+      <img src="assets/tableau.jpg" alt="Dashboard Tableau">
+      <div class="body">
+        <div class="chips"><span class="chip">Tableau</span><span class="chip">Data Storytelling</span></div>
+        <h3>Analisis Performa Produk, Kota & Channel</h3>
+        <p>Menemukan produk dengan revenue terbesar tetapi rating terendah, dengan tingkat return online 12,8% vs offline 1,8%, lalu menyusun rekomendasi dalam alur konteks–konflik–resolusi.</p>
+        <div class="links"><a href="https://drive.google.com/file/d/1Y58nmYdaYwQ_9CBpxbH_JGU4lNBcvipH/view?usp=sharing" target="_blank">Lihat portofolio →</a>
+        <!-- Kalau sudah upload ke Tableau Public, hapus tanda komentar di baris bawah dan ganti LINK -->
+        <!-- <a href="LINK_TABLEAU_PUBLIC" target="_blank">Dashboard interaktif →</a> -->
+        </div>
+      </div>
+    </article>
+
+    <article class="proj">
+      <img src="assets/looker.jpg" alt="Dashboard Looker Studio">
+      <div class="body">
+        <div class="chips"><span class="chip">Looker Studio</span><span class="chip">Dashboard Interaktif</span></div>
+        <h3>Dashboard Penjualan FMCG Interaktif</h3>
+        <p>Dashboard 20.000 transaksi dengan filter tanggal, channel, kategori, dan status, dilengkapi insight wilayah, produk, dan rekomendasi bisnis.</p>
+        <div class="links"><a href="https://drive.google.com/file/d/1Y58nmYdaYwQ_9CBpxbH_JGU4lNBcvipH/view?usp=sharing" target="_blank">Lihat portofolio →</a>
+        <!-- Ganti LINK dengan link "Bagikan" dashboard Looker Studio Anda, lalu hapus tanda komentar -->
+        <!-- <a href="LINK_LOOKER_STUDIO" target="_blank">Dashboard interaktif →</a> -->
+        </div>
+      </div>
+    </article>
+
+    <article class="proj">
+      <img src="assets/revou.jpg" alt="Marketing Dashboard Looker Studio – Capstone RevoU">
+      <div class="body">
+        <div class="chips"><span class="chip">Looker Studio</span><span class="chip">Python (EDA)</span><span class="chip">Proyek Kelompok</span></div>
+        <h3>Analisis Pembatalan Booking Hotel – Capstone RevoU</h3>
+        <p>Menganalisis 119.390 booking dari City Hotel dan Resort Hotel (2014–2017) dengan tingkat pembatalan 37,14%. Dashboard memetakan pembatalan per bulan, tipe hotel, tipe tamu, dan negara (tertinggi Portugal), sebagai dasar rekomendasi menurunkan pembatalan ke 30,6%. Nilai kelompok: 95.</p>
+        <div class="links"><span style="color:var(--muted);font-weight:600">RevoU Tech Academy • 2023</span>
+        <!-- Kalau dashboard Looker Studio-nya sudah dibagikan publik, hapus tanda komentar di baris bawah -->
+        <!-- <a href="https://lookerstudio.google.com/reporting/de37e408-8afd-4070-8d15-d86d0b1c1623" target="_blank">Dashboard interaktif →</a> -->
+        </div>
+      </div>
+    </article>
+
+    <article class="proj">
+      <img src="assets/perikanan.jpg" alt="Infografis hasil budidaya perikanan Jawa Timur" style="object-fit:contain;object-position:center;background:#F3F3EE">
+      <div class="body">
+        <div class="chips"><span class="chip">Excel</span><span class="chip">SPSS</span><span class="chip">Korelasi & Regresi</span><span class="chip">Infografis</span></div>
+        <h3>Analisis Hasil Budidaya Perikanan Jawa Timur – DKP Jatim</h3>
+        <p>Proyek magang: mengolah data budidaya perikanan Jawa Timur dan menyajikannya dalam infografis. Temuan utama: volume produksi tertinggi di Sumenep, tetapi nilai produksi tertinggi di Gresik. Budidaya laut menyumbang 53% volume, sedangkan tambak menyumbang 49% nilai, jadi volume tinggi tidak menjamin nilai tinggi.</p>
+        <div class="links"><a href="assets/perikanan2.jpg" target="_blank">Infografis komoditas →</a><span style="color:var(--muted);font-weight:600">Magang • 2022</span></div>
+      </div>
+    </article>
+
+  </div>
+</div></section>
+
+<!-- ================= PENGALAMAN ================= -->
+<section id="pengalaman" style="padding-top:0"><div class="wrap">
+  <h2>Pengalaman</h2>
+  <p class="sub">Pekerjaan dan magang di bidang data.</p>
+  <div class="tl">
+
+    <div class="job"><div class="when">Nov 2025 – Okt 2026</div><div>
+      <h3>PT Indonesia Distribusi Jagatraya</h3><h4>Staff Business Analyst</h4>
+      <ul><li>Super Admin SFA: mengelola master data user, SKU, customer, dan area mapping di 6 region.</li>
+      <li>Menyusun dan menganalisis laporan performa harian–bulanan Sales Executive & Supervisor.</li>
+      <li>Memonitor KPI taking order, kunjungan sales, dan cakupan area; membuat dashboard marketing.</li></ul>
+    </div></div>
+
+    <div class="job"><div class="when">Apr 2025 – Nov 2025</div><div>
+      <h3>PT Parama Global Inspira (Paragon Group)</h3><h4>Administrator (Seasonal)</h4>
+      <ul><li>Memproses 3.000+ Purchase Order melalui Odoo/Wagyu ERP hingga Sales Order dan Delivery Order.</li>
+      <li>Menyelesaikan masalah PO (harga, diskon, koli, item); 85% PO bermasalah berhasil direvisi.</li></ul>
+    </div></div>
+
+    <div class="job"><div class="when">Nov 2024 – Des 2024</div><div>
+      <h3>Proyek Verifikasi Data Pilkada Gubernur Jawa Timur</h3><h4>Data Verifier</h4>
+      <ul><li>Memverifikasi dan memvalidasi data perolehan suara TPS se-Jawa Timur.</li></ul>
+    </div></div>
+
+    <div class="job"><div class="when">Jul 2022 – Agu 2022</div><div>
+      <h3>Dinas Kelautan dan Perikanan Provinsi Jawa Timur</h3><h4>Data Analyst Intern</h4>
+      <ul><li>Menganalisis data perikanan 2019–2021 (korelasi & regresi) dengan Excel dan SPSS; meningkatkan akurasi pelaporan hingga 95%.</li></ul>
+    </div></div>
+
+  </div>
+</div></section>
+
+<!-- ================= KEAHLIAN & SERTIFIKAT ================= -->
+<section id="keahlian" style="padding-top:0"><div class="wrap">
+  <h2>Keahlian & Sertifikasi</h2>
+  <p class="sub">S1 Statistika, Universitas Airlangga (2020–2024) • IPK 3,34</p>
+  <div class="grid2">
+    <div class="box"><h3>Keahlian</h3>
+      <div class="skillgroup"><small>Visualisasi & BI</small><div class="chips"><span class="chip">Power BI</span><span class="chip">Tableau</span><span class="chip">Looker Studio</span><span class="chip">Excel Dashboard</span></div></div>
+      <div class="skillgroup"><small>Data</small><div class="chips"><span class="chip">SQL (MySQL)</span><span class="chip">Python (pandas)</span><span class="chip">Excel</span><span class="chip">Data Cleaning</span><span class="chip">Data Modeling</span></div></div>
+      <div class="skillgroup"><small>Statistik</small><div class="chips"><span class="chip">Regresi</span><span class="chip">Multivariat</span><span class="chip">SEM-PLS</span><span class="chip">SPSS</span><span class="chip">SmartPLS</span><span class="chip">RStudio</span></div></div>
+      <div class="skillgroup"><small>Sistem</small><div class="chips"><span class="chip">Odoo ERP</span><span class="chip">Sales Force Automation</span></div></div>
+    </div>
+    <div class="box"><h3>Sertifikasi</h3>
+      <div class="cert"><b>Sertifikat Kompetensi Analisa Data Statistik</b><span>LSP Universitas Airlangga • 2024</span></div>
+      <div class="cert"><b>Bootcamp Data Visualization (Predikat Expert)</b><span>KarirNex • Okt 2026 • dengan surat rekomendasi</span></div>
+      <div class="cert"><b>RevoU Tech Academy – Data & Software Engineering</b><span>Studi Independen Kampus Merdeka • 2023 • Nilai A</span></div>
+      <div class="cert"><b>Intro to Data Analytics</b><span>RevoU Mini Course • Okt 2026</span></div>
+      <div class="cert"><b>Excel Class – NextGen Workshop</b><span>BEM FTMM UNAIR × Ruang Data • 2024 • Nilai 94</span></div>
+    </div>
+  </div>
+</div></section>
+
+<!-- ================= KONTAK ================= -->
+<section id="kontak" style="padding-top:0"><div class="wrap">
+  <div class="contact">
+    <h2>Mari Terhubung</h2>
+    <p>Terbuka untuk peluang Data Analyst, Business Intelligence, dan program pengembangan di perbankan.</p>
+    <div class="btns" style="justify-content:center">
+      <a class="btn primary" style="background:#fff;color:var(--navy)" href="mailto:rahmahmifta07@gmail.com">rahmahmifta07@gmail.com</a>
+      <a class="btn" style="background:transparent;color:#fff" href="https://www.linkedin.com/in/nurrahmahmifta" target="_blank">LinkedIn</a>
+    </div>
+  </div>
+</div></section>
+
+<footer>© 2026 Nur Rahmah Miftakhul Jannah • Sidoarjo, Jawa Timur</footer>
+
+<div class="lb" id="lb"><img alt=""></div>
+<script>
+  const lb=document.getElementById('lb'), lbi=lb.querySelector('img');
+  document.querySelectorAll('.proj img').forEach(i=>i.addEventListener('click',()=>{lbi.src=i.src;lb.classList.add('open')}));
+  lb.addEventListener('click',()=>lb.classList.remove('open'));
+</script>
+</body>
+</html>
